@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css">
+    <link rel="stylesheet" href="/frontend/assets/css/style.css">
+    <title>Formulário ticket:</title>
+</head>
+
+<body>
+    <header>
+        <div class="div-theme">
+            <img id="icon-theme" src="/frontend/assets/icons/sun_1488264.png" alt="">
+            <button title="Trocar tema claro/escuro" class="at-button" id="toggleTheme">
+                <div class="at-item" id="slid-circle"></div>
+            </button>
+        </div>
+        <img class="logo" id="logo-empresa" src="/frontend/assets/images/company_logo.webp" alt="Logotipo da empresa">
+    </header>
+    <main class="corpo">
+        <div class="container" id="cont">
+            <label for="ttk">TTK:</label>
+            <input type="text" name="ttk" id="label-ttk" class="label-text" required>
+
+            <label for="id">ID Serviço:</label>
+            <input type="text" name="id" id="label-id" class="label-text">
+
+            <label for="causa">Causa Raiz:</label>
+            <select name="causa" id="label-causa" class="label-text">
+                <option value=""></option>
+                <option value="Fibra quebrada (LOS)">Fibra quebrada (LOS)</option>
+                <option value="CTO Atenuada">CTO Atenuada</option>
+                <option value="CTO Danificada">CTO Danificada</option>
+                <option value="CTO Sem potencia">CTO Sem potencia</option>
+                <option value="Fora de serviço">Fora de serviço</option>
+                <option value="Troca de poste">Troca de poste</option>
+                <option value="Suspeita de facilidade (inversão de SP)">Suspeita de facilidade (inversão de SP)</option>
+                <option value="Porta com defeito">Porta com defeito</option>
+            </select>
+
+            <label for="ard">ARD:</label>
+            <input type="text" name="ard" id="label-ard" class="label-text">
+
+            <label for="sp">SP:</label>
+            <input type="number" name="sp" id="label-sp" class="label-text">
+
+            <label for="cto">CTOs:</label>
+            <input type="text" name="cto" id="label-cto" class="label-text">
+
+            <label for="cliente">Clientes afetados:</label>
+            <input type="number" name="cliente" id="label-cliente" class="label-text">
+
+            <!-- <label for="cep">CEP:</label>
+            <input type="text" name="cep" id="label-cep" class="label-text"> -->
+
+            <label for="rua">Rua:</label>
+            <input type="text" name="rua" id="label-rua" class="label-text">
+
+            <label for="bairro">Bairro:</label>
+            <input type="text" name="bairro" id="label-bairro" class="label-text">
+
+            <label for="cidade">Cidade:</label>
+            <select name="cidade" id="cidadeSelect">
+                <option value=""></option>
+                <option value="Camaquã">Camaquã</option>
+                <option value="Bagé">Bagé</option>
+                <option value="Santana do Livramento">Santana do Livramento</option>
+                <option value="Alegrete">Alegrete</option>
+                <option value="Uruguaiana">Uruguaiana</option>
+                <option value="Carazinho">Carazinho</option>
+                <option value="Erechim">Erechim</option>
+                <option value="Ijui">Ijui</option>
+                <option value="Palmeira das Missões">Palmeira das Missões</option>
+                <option value="Santa Rosa">Santa Rosa</option>
+                <option value="Santo Angelo">Santo Angelo</option>
+                <option value="Sarandi">Sarandi</option>
+                <option value="Três de Maio">Três de Maio</option>
+                <option value="Cachoeira do Sul">Cachoeira do Sul</option>
+                <option value="Canela">Canela</option>
+                <option value="Capão da Canoa">Capão da Canoa</option>
+                <option value="Carlos Barbosa">Carlos Barbosa</option>
+                <option value="Dois Irmãos">Dois Irmãos</option>
+                <option value="Flores da Cunha">Flores da Cunha</option>
+                <option value="Garibaldi">Garibaldi</option>
+                <option value="Gramado">Gramado</option>
+                <option value="Igrejinha">Igrejinha</option>
+                <option value="Ivoti">Ivoti</option>
+                <option value="Lagoa Vermelha">Lagoa Vermelha</option>
+                <option value="Nova Petrópolis">Nova Petrópolis</option>
+                <option value="Osório">Osório</option>
+                <option value="São Marcos">São Marcos</option>
+                <option value="Taquara">Taquara</option>
+                <option value="Torres">Torres</option>
+                <option value="Tramandai">Tramandai</option>
+                <option value="Vacaria">Vacaria</option>
+                <option value="Veranopolis">Veranopolis</option>
+                <option value="Xangri-lá">Xangri-lá</option>
+                <option value="Lajeado">Lajeado</option>
+                <option value="Estrela">Estrela</option>
+                <option value="Venancio aires">Venancio aires</option>
+                <option value="Teutonia">Teutonia</option>
+                <option value="Charqueadas">Charqueadas</option>
+            </select>
+
+            <label for="hora">Hora inicio:</label>
+            <input type="time" name="hora" id="label-hora" class="label-text" style="width: 70px;">
+
+            <div class="check">
+                <label for="TAGs">TAGs:</label>
+                <div>
+                    <input type="checkbox" id="tag1" name="massiva" value="Massiva">
+                    <label for="massiva">Massiva</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="tag2" name="noc" value="Noc">
+                    <label for="noc">NOC</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="tag3" name="pendencia" value="Pendência Técnica">
+                    <label for="pendencia">Pendencia técnica</label>
+                </div>
+            </div>
+
+            <button class="buttons" id="btn">
+                <img class="icons" src="/frontend/assets/icons/document-medicine-svgrepo-com.svg" alt="">
+                <span class="text-button">Gera mascara</span>
+            </button>
+            <button title="Limpar formulário" class="buttons" id="btn-limpa">
+                <img class="icons" src="/frontend/assets/icons/eraser-svgrepo-com.svg" alt="">
+                <span class="text-button">Limpa</span>
+            </button>
+        </div>
+        <div class="output">
+            <textarea name="saida-texto" id="saida-texto"></textarea>
+            <button title="Enviar mascara para o telegram" class="buttons" id="envia-telegram">
+                <img src="/frontend/assets/icons/forward-svgrepo-com.svg" alt="" class="icons">
+                <span class="text-button">Enviar para o grupo</span>
+            </button>
+        </div>
+        <div id="drop-area">
+            <p><strong>Arraste a evidencia aqui</strong> ou 📎 <label class="fileElem" for="fileElem">clique para
+                    selecionar</label></p>
+            <input class="evidencia" type="file" id="fileElem" accept="image/*" />
+            <img id="preview" class="preview-evidencia" />
+        </div>
+
+        <div id="alerta" class="alerta">
+            <!-- append da mensagem será inserida aqui -->
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+    <script type="module" src="/frontend/assets/js/script.js?v=1.0" defer></script>
+</body>
+<footer class="rodape">
+    Developed by Vinicius Pires
+</footer>
+
+</html>
